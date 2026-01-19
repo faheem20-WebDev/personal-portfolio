@@ -2,23 +2,34 @@
 const menuBtn = document.getElementById('mobile-menu-btn');
 const closeBtn = document.getElementById('close-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
+const mobileOverlay = document.getElementById('mobile-menu-overlay');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 const navbar = document.getElementById('navbar');
 
 function toggleMenu() {
-    mobileMenu.classList.toggle('translate-x-full');
-    document.body.classList.toggle('overflow-hidden');
+    const isClosed = mobileMenu.classList.contains('translate-x-full');
+    
+    if (isClosed) {
+        // Open Menu
+        mobileMenu.classList.remove('translate-x-full');
+        mobileOverlay.classList.remove('hidden');
+        setTimeout(() => mobileOverlay.classList.remove('opacity-0'), 10); // Fade in
+        document.body.classList.add('overflow-hidden');
+    } else {
+        // Close Menu
+        mobileMenu.classList.add('translate-x-full');
+        mobileOverlay.classList.add('opacity-0');
+        setTimeout(() => mobileOverlay.classList.add('hidden'), 300); // Wait for fade out
+        document.body.classList.remove('overflow-hidden');
+    }
 }
 
 menuBtn.addEventListener('click', toggleMenu);
 closeBtn.addEventListener('click', toggleMenu);
+mobileOverlay.addEventListener('click', toggleMenu); // Close when clicking outside
 
 mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (!mobileMenu.classList.contains('translate-x-full')) {
-            toggleMenu();
-        }
-    });
+    link.addEventListener('click', toggleMenu);
 });
 
 // Navbar Scroll Effect
