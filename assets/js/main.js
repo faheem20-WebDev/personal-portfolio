@@ -83,6 +83,20 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
+// Typewriter Effect
+const typedElement = document.getElementById('typed-text');
+if (typedElement) {
+    new Typed('#typed-text', {
+        strings: ['Software Engineer', 'MERN Stack Developer', 'Problem Solver'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true,
+        cursorChar: '|',
+        autoInsertCss: true,
+    });
+}
+
 // Contact Form Handling (AJAX)
 const contactForm = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
