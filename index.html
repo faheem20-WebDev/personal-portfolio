@@ -16,6 +16,7 @@
     
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -194,53 +195,104 @@
     <section id="skills" class="py-24">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
-                <span class="text-sky-400">02.</span> Technical Skills
+                <span class="text-sky-400">02.</span> Tech Stack
             </h2>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="space-y-12">
                 <!-- Frontend -->
-                <div class="bg-navy-800/50 border border-slate-800 p-8 rounded-2xl hover:border-sky-500/30 transition-colors">
-                    <div class="w-12 h-12 bg-blue-600/10 rounded-lg flex items-center justify-center text-blue-500 mb-6 text-2xl">
-                        <i class="ph ph-monitor"></i>
+                <div>
+                    <h3 class="text-xl font-semibold text-slate-400 mb-6 border-l-4 border-blue-500 pl-4">Frontend Development</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <!-- HTML -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-orange-500/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-html5-plain text-5xl text-slate-400 group-hover:text-orange-500 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">HTML5</span>
+                        </div>
+                        <!-- CSS -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-blue-500/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-css3-plain text-5xl text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">CSS3</span>
+                        </div>
+                        <!-- JS -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-yellow-400/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-javascript-plain text-5xl text-slate-400 group-hover:text-yellow-400 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">JavaScript</span>
+                        </div>
+                        <!-- React -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-sky-400/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-react-original text-5xl text-slate-400 group-hover:text-sky-400 transition-colors group-hover:animate-spin-slow"></i>
+                            <span class="text-sm font-medium text-slate-300">React.js</span>
+                        </div>
+                        <!-- Tailwind -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-cyan-400/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-tailwindcss-original text-5xl text-slate-400 group-hover:text-cyan-400 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">Tailwind</span>
+                        </div>
+                        <!-- Bootstrap -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-purple-500/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-bootstrap-plain text-5xl text-slate-400 group-hover:text-purple-500 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">Bootstrap</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Frontend</h3>
-                    <ul class="space-y-2 font-mono text-sm text-slate-400">
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> HTML5 & CSS3</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> JavaScript (ES6+)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> React.js</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> Tailwind CSS</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> Bootstrap</li>
-                    </ul>
                 </div>
 
-                <!-- Backend -->
-                <div class="bg-navy-800/50 border border-slate-800 p-8 rounded-2xl hover:border-sky-500/30 transition-colors">
-                    <div class="w-12 h-12 bg-sky-600/10 rounded-lg flex items-center justify-center text-sky-500 mb-6 text-2xl">
-                        <i class="ph ph-database"></i>
+                <!-- Backend & DB -->
+                <div>
+                    <h3 class="text-xl font-semibold text-slate-400 mb-6 border-l-4 border-green-500 pl-4">Backend & Database</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <!-- Node -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-green-500/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-nodejs-plain text-5xl text-slate-400 group-hover:text-green-500 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">Node.js</span>
+                        </div>
+                        <!-- Express -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-white/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-express-original text-5xl text-slate-400 group-hover:text-white transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">Express.js</span>
+                        </div>
+                        <!-- MongoDB -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-green-400/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-mongodb-plain text-5xl text-slate-400 group-hover:text-green-400 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">MongoDB</span>
+                        </div>
+                        <!-- PostgreSQL -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-blue-400/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-postgresql-plain text-5xl text-slate-400 group-hover:text-blue-400 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">PostgreSQL</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Backend & DB</h3>
-                    <ul class="space-y-2 font-mono text-sm text-slate-400">
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> Node.js</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> Express.js</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> MongoDB</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> Neon PostgreSQL</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> REST APIs</li>
-                    </ul>
                 </div>
 
                 <!-- Tools -->
-                <div class="bg-navy-800/50 border border-slate-800 p-8 rounded-2xl hover:border-sky-500/30 transition-colors">
-                    <div class="w-12 h-12 bg-purple-600/10 rounded-lg flex items-center justify-center text-purple-500 mb-6 text-2xl">
-                        <i class="ph ph-wrench"></i>
+                <div>
+                    <h3 class="text-xl font-semibold text-slate-400 mb-6 border-l-4 border-purple-500 pl-4">Tools & Workflow</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <!-- Git -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-red-500/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-git-plain text-5xl text-slate-400 group-hover:text-red-500 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">Git</span>
+                        </div>
+                        <!-- GitHub -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-white/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-github-original text-5xl text-slate-400 group-hover:text-white transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">GitHub</span>
+                        </div>
+                        <!-- VS Code -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-blue-500/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-vscode-plain text-5xl text-slate-400 group-hover:text-blue-500 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">VS Code</span>
+                        </div>
+                        <!-- Figma -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-purple-400/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-figma-plain text-5xl text-slate-400 group-hover:text-purple-400 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">Figma</span>
+                        </div>
+                        <!-- Postman -->
+                        <div class="bg-navy-800/50 border border-slate-800 p-6 rounded-xl flex flex-col items-center gap-4 hover:border-orange-400/50 hover:bg-navy-800 transition-all group">
+                            <i class="devicon-postman-plain text-5xl text-slate-400 group-hover:text-orange-400 transition-colors"></i>
+                            <span class="text-sm font-medium text-slate-300">Postman</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Tools & Others</h3>
-                    <ul class="space-y-2 font-mono text-sm text-slate-400">
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> Git & GitHub</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> VS Code</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> Figma (UI Design)</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> Postman</li>
-                        <li class="flex items-center gap-2"><i class="ph ph-check-circle text-sky-400"></i> Vercel Deployment</li>
-                    </ul>
                 </div>
             </div>
         </div>
