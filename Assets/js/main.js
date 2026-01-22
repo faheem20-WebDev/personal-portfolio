@@ -32,14 +32,34 @@ mobileLinks.forEach(link => {
     link.addEventListener('click', toggleMenu);
 });
 
-// Navbar Scroll Effect
+// Navbar Scroll Effect & Scroll to Top Button
+const scrollTopBtn = document.getElementById('scroll-top-btn');
+
 window.addEventListener('scroll', () => {
+    // Navbar effect
     if (window.scrollY > 50) {
         navbar.classList.add('bg-navy-900/90', 'backdrop-blur-md', 'shadow-lg');
     } else {
         navbar.classList.remove('bg-navy-900/90', 'backdrop-blur-md', 'shadow-lg');
     }
+
+    // Scroll to Top visibility
+    if (window.scrollY > 500) {
+        scrollTopBtn.classList.remove('translate-y-20', 'opacity-0');
+    } else {
+        scrollTopBtn.classList.add('translate-y-20', 'opacity-0');
+    }
 });
+
+// Scroll to Top Action
+if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 // Reveal Animations
 const observerOptions = {
@@ -62,6 +82,20 @@ document.querySelectorAll('section').forEach(section => {
     section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
     observer.observe(section);
 });
+
+// Typewriter Effect
+const typedElement = document.getElementById('typed-text');
+if (typedElement) {
+    new Typed('#typed-text', {
+        strings: ['Software Engineer', 'MERN Stack Developer', 'Problem Solver'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true,
+        cursorChar: '|',
+        autoInsertCss: true,
+    });
+}
 
 // Contact Form Handling (AJAX)
 const contactForm = document.getElementById('contact-form');
